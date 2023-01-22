@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Box, Typography, Card, CardMedia } from '@mui/material';
+import { Container, Box, Typography, Card, CardMedia, Button } from '@mui/material';
 
 import Shows1 from '../assets/image/shows/1.png'
 import Shows2 from '../assets/image/shows/2.png'
@@ -43,8 +43,8 @@ const style = {
         display: 'flex',
         flexDirection: 'row',
         height: '35px',
-        paddingTop: '2rem',
-        paddingBottom: '4rem',
+        marginBottom: '47px',
+        marginTop: '68px',
         marginLeft: '0',
         marginRight: '0'
     },
@@ -61,6 +61,7 @@ const style = {
         flexDirection: 'row',
         flexFlow: 'wrap',
         gap: '44px',
+        justifyContent: 'center',
 
     },
     card: {
@@ -70,6 +71,14 @@ const style = {
     },
     image: {
         borderRadius: '22px'
+    },
+    btn: {
+        borderRadius: '100px',
+        width: '141px',
+        height: '50px',
+        background: 'linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)',
+        marginTop: '55px',
+        marginLeft: '25px',
     }
 }
 
@@ -84,8 +93,8 @@ function TrendsBlock() {
             </Container>
 
             <Box sx={style.cardContainer}>
-                {shows.map(show => (
-                    <Card sx={style.card}>
+                {shows.map((show, index) => (
+                    <Card key={index} sx={style.card}>
                         <img src={show} style={style.image} />
                     </Card>
                 ))}
@@ -96,12 +105,14 @@ function TrendsBlock() {
             </Container>
 
             <Box sx={style.cardContainer}>
-                {movies.map(movie => (
-                    <Card sx={style.card}>
+                {movies.map((movie, index) => (
+                    <Card key={index} sx={style.card}>
                         <img src={movie} style={style.image} />
                     </Card>
                 ))}
             </Box>
+
+            <Button sx={style.btn} variant="contained">See more</Button>
         </Container>
     )
 }

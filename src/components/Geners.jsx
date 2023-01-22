@@ -25,14 +25,14 @@ const genres = [
 
 const style = {
     wrapContainer: {
-        maxWidth: '1550px !important'
+        maxWidth: '1550px !important',
+        paddingTop: '108px',
     },
     titleContainer: {
         display: 'flex',
         flexDirection: 'row',
         height: '35px',
-        paddingTop: '2rem',
-        paddingBottom: '4rem',
+        marginBottom: '47px',
         marginLeft: '0',
         marginRight: '0'
     },
@@ -49,6 +49,7 @@ const style = {
         flexDirection: 'row',
         flexFlow: 'wrap',
         gap: '27px',
+        justifyContent: 'center',
 
     },
     card: {
@@ -67,12 +68,12 @@ function Genres() {
     return (
         <Container sx={style.wrapContainer}>
             <Container sx={style.titleContainer}>
-                <Typography sx={style.text}><img src={Flag} /> Trending TV Shows {'>'}</Typography>
+                <Typography sx={style.text}><img src={Flag} /> Popular Genres {'>'}</Typography>
             </Container>
 
             <Box sx={style.cardContainer}>
-                {genres.map(gener => (
-                    <Card sx={style.card}>
+                {genres.map((gener, index) => (
+                    <Card key={index} sx={style.card}>
                         <img src={gener} style={style.image} />
                     </Card>
                 ))}

@@ -7,23 +7,15 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import MailIcon from '@mui/icons-material/Mail';
 import Badge from '@mui/material/Badge';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import Logo from '../assets/image/Logo.svg'
-import Notifi from '../assets/image/Notifi.svg'
 import AddPerson from '../assets/image/AddPerson.svg'
 
 const pages = ['Home', 'TV Shows', 'Movies', 'Series'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -52,8 +44,17 @@ function Header() {
     const menuId = 'primary-search-account-menu';
 
     return (
-        <AppBar position="static">
-            <Container maxWidth="xxl" sx={{ background: '#000000', height: '100px', paddingTop: '1rem', paddingLeft: '5rem !important', paddingRight: '5rem !important', }}>
+        <AppBar maxWidth="xxl" position="static" sx={{
+            background: '#000000'
+        }}>
+            <Container sx={{
+                background: '#000000',
+                height: '100px',
+                paddingTop: '1rem',
+                paddingLeft: '5rem !important',
+                paddingRight: '5rem !important',
+                maxWidth: '1800px !important',
+            }}>
                 <Toolbar disableGutters>
 
                     <Typography
