@@ -3,33 +3,41 @@ import { Container, Box, Typography } from '@mui/material';
 import Logo from '../assets/image/Logo.svg'
 
 
+const styles = {
+    wrapContainer: {
+        background: '#101012',
+        width: '100%',
+        display: 'flex',
+        minHeight: '280px',
+        color: '#C2C2C2',
+    },
+    wrapBox: {
+        display: 'flex',
+
+        alignSelf: 'center',
+        paddingLeft: '245px !important',
+        paddingRight: '245px !important',
+        gap: '52px',
+        maxWidth: '1800px !important',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    textBox: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '15px',
+    },
+}
+
 function Footer() {
 
     return (
-        <Container maxWidth="xxl" sx={{
-            background: '#101012',
-            width: '100%',
-            display: 'flex',
-            minHeight: '280px',
-            color: '#C2C2C2',
-
-
-        }}>
-            <Box sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                paddingLeft: '245px !important',
-                paddingRight: '245px !important',
-                gap: '52px',
-                maxWidth: '1800px !important',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-            }}>
-                <Box>
+        <Container maxWidth="xxl" sx={styles.wrapContainer}>
+            <Box sx={styles.wrapBox}>
+                <Box sx={styles.textBox}>
                     <img src={Logo} width="157" height="70" />
                 </Box>
-                <Box>
+                <Box sx={styles.textBox}>
                     <Typography>
                         Voice over and Subtitle
                     </Typography>
@@ -43,7 +51,7 @@ function Footer() {
                         Contact us
                     </Typography>
                 </Box>
-                <Box>
+                <Box sx={styles.textBox}>
                     <Typography>
                         Voice Description
                     </Typography>
@@ -55,7 +63,7 @@ function Footer() {
                     </Typography>
 
                 </Box>
-                <Box>
+                <Box sx={styles.textBox}>
                     <Typography>
                         Help Center
                     </Typography>
@@ -67,7 +75,7 @@ function Footer() {
                     </Typography>
 
                 </Box>
-                <Box>
+                <Box sx={styles.textBox}>
                     <Typography>
                         Gift Cards
                     </Typography>

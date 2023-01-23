@@ -23,13 +23,15 @@ const styles = {
     imgMovie: {
         height: '341px',
         width: '739px',
-        borderRadius: '20px',
+        borderTopLeftRadius: '20px',
+        borderBottomLeftRadius: '20px',
     },
     imgCom: {
         height: '199px',
         width: '455px',
-        paddingLeft: '60px',
+        paddingLeft: '120px',
         alignSelf: 'center',
+        backgroundSize: 'unset',
     }
 }
 

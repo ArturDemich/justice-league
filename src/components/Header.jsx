@@ -153,7 +153,7 @@ function Header() {
                             aria-label="show 17 new notifications"
                             color="inherit"
                         >
-                            <Badge badgeContent=" " color="info" variant="dot" sx={{ right: '10' }}>
+                            <Badge badgeContent=" " color="info" variant="dot" sx={{ right: '10', }}>
                                 <NotificationsNoneIcon />
                             </Badge>
                         </IconButton>

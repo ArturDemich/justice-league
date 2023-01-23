@@ -54,7 +54,10 @@ const style = {
         fontStyle: 'normal',
         fontWeight: '700',
         fontSize: '28px',
-        lineHeight: '20px'
+        lineHeight: '20px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px',
     },
     cardContainer: {
         display: 'flex',
